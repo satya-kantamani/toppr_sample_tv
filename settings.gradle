@@ -1,0 +1,2 @@
+rootProject.name = "toppr_sample_tv_app"
+include ':app'
