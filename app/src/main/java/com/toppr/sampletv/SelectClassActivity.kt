@@ -43,7 +43,8 @@ class SelectClassActivity : AppCompatActivity() {
             button.setOnKeyListener { view, index, keyEvent ->
                 val handled = false
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && keyEvent.keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
-                    Toast.makeText(this, "You selected Grade $i", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "You selected Grade $i", Toast.LENGTH_SHORT).show()
+                    HomeActivity.startActivity(WeakReference(this@SelectClassActivity))
                 }
                 handled
             }
