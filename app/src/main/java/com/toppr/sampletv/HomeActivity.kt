@@ -17,7 +17,7 @@ import java.lang.ref.WeakReference
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
-    private lateinit var viewPager: ViewPager
+    private lateinit var viewPager: VerticalViewPager
     private lateinit var viewPagerAdapter: ViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

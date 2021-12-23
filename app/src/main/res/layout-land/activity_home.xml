@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeActivity">
 
-    <androidx.viewpager.widget.ViewPager
+    <com.toppr.sampletv.VerticalViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,11 +15,12 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="88dp"
             app:tabTextColor="@color/black"
             app:tabMode="scrollable"
+            android:rotation="90"
             android:background="@color/transparent"/>
 
-    </androidx.viewpager.widget.ViewPager>
+    </com.toppr.sampletv.VerticalViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
