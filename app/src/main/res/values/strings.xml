@@ -26,4 +26,6 @@
     <string name="_6th"><b>6</b><sup>th</sup></string>
     <string name="_7th"><b>7</b><sup>th</sup></string>
     <string name="_8th"><b>8</b><sup>th</sup></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

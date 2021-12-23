@@ -16,17 +16,85 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
+    }
 
-        val adapter = RecyclerAdapter(requireContext(), listOf(R.drawable.poster_image))
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view_1)
+        populateSubjectCards(view)
+        populateContinueVideoCards(view)
+        populateContinueStoryCards(view)
+    }
+
+    private fun populateSubjectCards(view : View){
+        val adapter = RecyclerAdapter(
+            requireContext(),
+            listOf(
+                R.drawable.ic_english,
+                R.drawable.ic_maths,
+                R.drawable.ic_art,
+                R.drawable.ic_biology,
+                R.drawable.ic_chemistry,
+                R.drawable.ic_english,
+                R.drawable.ic_maths,
+                R.drawable.ic_art,
+                R.drawable.ic_biology,
+                R.drawable.ic_chemistry,
+            )
+        )
+
+        val recyclerView: RecyclerView = view.findViewById(R.id.subjects_recycler_view)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(
             requireContext(), LinearLayoutManager.HORIZONTAL,
-            true
+            false
+        )
+    }
+
+    private fun populateContinueVideoCards(view : View){
+        val adapter = RecyclerAdapter(
+            requireContext(),
+            listOf(
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+                R.drawable.ic_continue_video,
+            )
         )
 
-        return view
+        val recyclerView: RecyclerView = view.findViewById(R.id.continue_videos_recycler_view)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(
+            requireContext(), LinearLayoutManager.HORIZONTAL,
+            false
+        )
+    }
+
+    private fun populateContinueStoryCards(view : View){
+        val adapter = RecyclerAdapter(
+            requireContext(),
+            listOf(
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+                R.drawable.ic_story_1,
+            )
+        )
+
+        val recyclerView: RecyclerView = view.findViewById(R.id.continue_stories_recycler_view)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(
+            requireContext(), LinearLayoutManager.HORIZONTAL,
+            false
+        )
     }
 }

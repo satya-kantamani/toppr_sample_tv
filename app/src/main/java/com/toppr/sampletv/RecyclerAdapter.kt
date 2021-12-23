@@ -27,9 +27,9 @@ class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
         return ViewHolder(view)
     }
 
-    override fun getItemCount() = 10/*dataSet.size*/
+    override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imageView.setImageDrawable(ContextCompat.getDrawable(context, dataSet[0]))
+        holder.imageView.setImageDrawable(ContextCompat.getDrawable(context, dataSet[position]))
     }
 }
