@@ -21,7 +21,7 @@
         android:id="@+id/tab_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_house"
+        android:src="@drawable/ic_house_selected"
         android:layout_marginBottom="20dp"
         android:focusable="true"/>
 
@@ -29,7 +29,7 @@
         android:id="@+id/tab_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_magnifyingglass"
+        android:src="@drawable/ic_search_unselected"
         android:layout_marginBottom="20dp"
         android:focusable="true"/>
 

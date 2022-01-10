@@ -43,7 +43,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/tv_title"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:descendantFocusability="afterDescendants" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_title_continue_videos"
@@ -64,7 +65,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_continue_videos"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:descendantFocusability="afterDescendants" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_title_continue_stories"
@@ -85,7 +87,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_continue_stories"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:descendantFocusability="afterDescendants" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

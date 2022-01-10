@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toppr_sample_tv_app">
         <activity
+            android:name=".PlayerActivity"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
