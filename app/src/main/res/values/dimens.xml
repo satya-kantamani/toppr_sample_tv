@@ -6,4 +6,7 @@
     <dimen name="dimens_30dp">30dp</dimen>
     <dimen name="dimens_100dp">100dp</dimen>
     <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_24">24dp</dimen>
+    <dimen name="dimens_60dp">60dp</dimen>
+    <dimen name="dimens_0dp">0dp</dimen>
 </resources>

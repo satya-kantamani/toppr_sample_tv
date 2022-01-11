@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
+import java.lang.ref.WeakReference
 
 
 class HomeFragment : Fragment() {
@@ -42,7 +43,9 @@ class HomeFragment : Fragment() {
                 R.drawable.ic_biology,
                 R.drawable.ic_chemistry,
             )
-        )
+        ){
+            startPlayerActivity()
+        }
 
         val recyclerView: RecyclerView = view.findViewById(R.id.subjects_recycler_view)
         recyclerView.adapter = adapter
@@ -65,7 +68,9 @@ class HomeFragment : Fragment() {
                 R.drawable.ic_continue_video,
                 R.drawable.ic_continue_video,
             )
-        )
+        ){
+            startPlayerActivity()
+        }
 
         val recyclerView: RecyclerView = view.findViewById(R.id.continue_videos_recycler_view)
         recyclerView.adapter = adapter
@@ -88,7 +93,9 @@ class HomeFragment : Fragment() {
                 R.drawable.ic_story_1,
                 R.drawable.ic_story_1,
             )
-        )
+        ){
+            startStoryActivity()
+        }
 
         val recyclerView: RecyclerView = view.findViewById(R.id.continue_stories_recycler_view)
         recyclerView.adapter = adapter
@@ -96,5 +103,13 @@ class HomeFragment : Fragment() {
             requireContext(), LinearLayoutManager.HORIZONTAL,
             false
         )
+    }
+
+    private fun startPlayerActivity(){
+        PlayerActivity.startActivity(WeakReference(context))
+    }
+
+    private fun startStoryActivity(){
+        StoryActivity.startActivity(WeakReference(context))
     }
 }

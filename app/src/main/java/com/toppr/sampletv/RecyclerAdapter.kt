@@ -12,7 +12,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import java.lang.ref.WeakReference
 
-class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
+class RecyclerAdapter(val context: Context, private val dataSet: List<Int>,
+private val onItemClick : () -> Unit) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -41,7 +42,7 @@ class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
             val handled = false
             if (keyEvent.action == KeyEvent.ACTION_DOWN && keyEvent.keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
                 Toast.makeText(context, "You selected position $position", Toast.LENGTH_SHORT).show()
-                PlayerActivity.startActivity(WeakReference(context))
+                onItemClick()
             }
             handled
         }
