@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".TabFragment"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tab_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_graduationcap"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tab_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_house_selected"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tab_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search_unselected"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tab_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_user"
+        android:focusable="true"/>
+
+</LinearLayout>
