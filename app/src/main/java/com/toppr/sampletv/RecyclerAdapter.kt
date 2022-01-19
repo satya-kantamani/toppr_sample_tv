@@ -38,6 +38,14 @@ class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.imageView.setImageDrawable(ContextCompat.getDrawable(context, dataSet[position]))
+        holder.parent.setOnFocusChangeListener{ view, hasFocus ->
+            if(hasFocus){
+                view.setBackgroundResource(R.drawable.drawable_rectangle)
+            } else {
+                view.setBackgroundResource(0)
+            }
+        }
+
         holder.parent.setOnKeyListener { view, index, keyEvent ->
             val handled = false
             if (keyEvent.action == KeyEvent.ACTION_DOWN && keyEvent.keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
