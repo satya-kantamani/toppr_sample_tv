@@ -2,20 +2,15 @@ package com.toppr.sampletv
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.PlaybackException
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.Player.Listener
 import com.google.android.exoplayer2.ui.StyledPlayerView
 import java.lang.ref.WeakReference
-import android.R.string.no
-import android.net.Uri
-import android.view.KeyEvent
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 
 
 class PlayerActivity : AppCompatActivity() {
@@ -28,6 +23,11 @@ class PlayerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_player)
         playerView = findViewById(R.id.player_view)
 
+        loadVideoPlayer()
+    }
+
+    private fun loadVideoPlayer(){
+        playerView.visibility = View.VISIBLE
         player = ExoPlayer.Builder(this).build()
         playerView.player = player
 

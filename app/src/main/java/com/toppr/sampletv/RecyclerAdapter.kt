@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.rajat.pdfviewer.PdfViewerActivity
 import java.lang.ref.WeakReference
 
 class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
@@ -42,6 +43,15 @@ class RecyclerAdapter(val context: Context, private val dataSet: List<Int>) :
             if (keyEvent.action == KeyEvent.ACTION_DOWN && keyEvent.keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
                 Toast.makeText(context, "You selected position $position", Toast.LENGTH_SHORT).show()
                 PlayerActivity.startActivity(WeakReference(context))
+                /*context.startActivity(
+                    PdfViewerActivity.launchPdfFromUrl(           //PdfViewerActivity.Companion.launchPdfFromUrl(..   :: incase of JAVA
+                        context,
+                        "http://www.africau.edu/images/default/sample.pdf",  // PDF URL in String format
+                        "sample.pdf",                        // PDF Name/Title in String format
+                        "",       // If nothing specific, Put "" it will save to Downloads
+                        enableDownload = false                    // This param is true by defualt.
+                    )
+                )*/
             }
             handled
         }
